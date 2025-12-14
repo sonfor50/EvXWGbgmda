@@ -1,7 +1,7 @@
 local Webhook = {}
 local HttpService = game:GetService("HttpService")
 
-local WEBHOOK_URL = "PUT_WEBHOOK_HERE"
+local WEBHOOK_URL = "https://discord.com/api/webhooks/1449708207059763260/LeCAHJbm9JW2RtziDNeQI_RA1qJXVE0UM0GFNtD3JvzrlvEZKucyEdvSyeIKii5Ss8VD"
 
 function Webhook.SendFull(text)
     if not http_request then return end
@@ -19,5 +19,6 @@ function Webhook.SendFull(text)
         })
     })
 end
+
 
 return Webhook

